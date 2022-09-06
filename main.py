@@ -14,6 +14,7 @@ response = requests.get(url, headers=ua)
 text = response.text
 soup = bs4.BeautifulSoup(text, features="html.parser")
 
+
 # pprint(soup)
 
 articles = soup.find_all("article")
@@ -24,3 +25,6 @@ for article in articles:
     keywords = [keyword.text.strip() for keyword in keywords]
     pprint(keywords)
     print()
+
+
+git
